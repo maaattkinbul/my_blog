@@ -1,0 +1,262 @@
+/* ШАПКА САЙТА СТИЛИ*/
+/* Общие стили для шапки */
+header {
+    background: linear-gradient(to right, #333, #555); /* Градиентный фон */
+    color: white;
+    padding: 20px 0; /* Увеличиваем внутренние отступы */
+    width: 100%; /* Полная ширина страницы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+    position: relative; /* Позволяет точнее контролировать расположение элементов */
+}
+
+/* Контейнер для всей шапки */
+.header-container {
+    display: flex; /* Используем Flexbox для управления расположением */
+    justify-content: space-between; /* Пространство между блоками */
+    align-items: center; /* Вертикальное выравнивание */
+    width: 95%; /* Ограничиваем ширину контента */
+    margin: 0 auto; /* Центрируем контейнер */
+}
+/* Центральный текст */
+.center-text {
+    text-align: center;
+    flex-grow: 1; /* Центральный блок занимает всю доступную ширину */
+}
+
+/* Центральный текст */
+.center-text h1 {
+    margin: 0;
+    font-size: 24px; /* Размер текста */
+    color: white; /* Белый цвет текста */
+    text-shadow: 1px 1px 2px black; /* Тень текста */
+    text-align: center; /* Центрируем текст */
+}
+
+/* Стили для навигации */
+.main-nav {
+    display: flex; /* Ссылки в одну строку */
+    gap: 15px; /* Расстояние между ссылками */
+    align-items: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Отступы между ссылками */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Секция пользователя (дата + кнопки) */
+.user-section {
+    display: flex; /* Делаем дату и кнопки в одну строку */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    gap: 5px; /* Расстояние между блоками */
+}
+
+/* Стили для даты */
+.user-section .date-time {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Стили для кнопок */
+.user-actions {
+    display: flex; /* Располагаем кнопки в одну строку */
+}
+
+.user-actions a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
+/* Эффект при наведении */
+.main-nav a:hover,
+.user-actions a:hover {
+    text-decoration: underline;
+    background-color: #555;
+    color: #ffcc00;
+}
+
+/* Общий стиль подвала */
+footer {
+    background: linear-gradient(to right, #333, #555); /* Градиентный фон */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Тень сверху */
+    position: fixed; /* Закрепляем подвал */
+    bottom: 0; /* Привязываем к нижней части окна */
+    width: 100%; /* Подвал на всю ширину экрана */
+    z-index: 99; /* Чтобы подвал был выше других элементов */
+}
+
+/* Контейнер подвала */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Элементы: слева, по центру, справа */
+    align-items: center; /* Вертикальное выравнивание */
+    width: 90%;
+    margin: 0 auto;
+    position: relative; /* Для независимого позиционирования */
+}
+
+/* Социальные ссылки */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Текст в центре */
+.footer-text {
+    position: absolute; /* Абсолютное позиционирование */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Для точного центрирования */
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+}
+
+.footer-text a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка прокрутки вверх */
+.scroll-to-top {
+    position: fixed; /* Фиксируем относительно окна браузера */
+    right: 20px; /* Расположение справа */
+    bottom: 20px; /* Расположение снизу */
+    z-index: 100; /* Поверх других элементов */
+}
+
+.scroll-to-top img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top img:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Общие стили страницы "О себе" */
+.about-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Заголовок */
+.about-header h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 18px;
+    text-align: center;
+    color: #666;
+}
+
+/* Блок с фото */
+.about-photo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-photo .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Детальное описание */
+.about-details {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Контакты */
+.about-contacts {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-contacts a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-contacts .social-links {
+    margin-top: 10px;
+}
+
+.about-contacts .social-links img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.about-contacts .social-links img:hover {
+    transform: scale(1.1);
+}
+
+/* Форма обратной связи */
+.contact-form {
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
